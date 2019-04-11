@@ -1,0 +1,92 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url('../../static/img/backg.png');
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #621e12;
+  border-style: outset;
+  border-color: #621e12;
+  border-radius: 15px;
+  color: white;
+}
+
+.form-signin .form-signin-heading {
+  color: white;
+}
+
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: white;
+  color: #621e12;
+}
+
+
+.form-signin .form-control {
+  background-color: #fff;
+  border-color: #8b0000;
+  color: black;
+}
+
+.help-block {
+  color: red;
+}
+
+.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover {
+color: #fff;
+background-color: #8e3131;
+border: none;
+}
+
+.btn-primary:hover {
+border: none;
+}

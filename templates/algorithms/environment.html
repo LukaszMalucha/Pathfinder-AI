@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<br>
+<div class="row text-center row-dashboard">
+    <div class="col-sm-12 col-md-12 col-lg-5 text-center no-padding-left">
+        <div class="card command-card">
+            <form method="POST" enctype="multipart/form-data" class="col s12" action="{{ url_for('pathfinder') }}" id="form-path">
+                <div class="row text-center">
+                    <h2>Initiate Pathfinder Algorithm</h2>
+                </div>
+                <div class="row text-center">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="button_command"><i class="material-icons">memory</i></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-7 text-center">
+        <div class="card" id="map-card">
+            {% for i in range(64) %} {% if i == env_dict.start_location %}
+            <div class="col-xs-2 col-sm-2 col-md-2 text-center" id="tile-column">
+                <img src="{{url_for('static', filename='img/mars_buggy.png')}}" class="mars-tile" id="start_location">
+            </div>
+            {% elif i == env_dict.astronauts %}
+            <div class="col-xs-2 col-sm-2 col-md-2 text-center" id="tile-column">
+                <img src="{{url_for('static', filename='img/mars_astronauts.png')}}" class="mars-tile" id="mars_astronauts">
+            </div>
+            {% elif i == env_dict.base_location %}
+            <div class="col-xs-2 col-sm-2 col-md-2 text-center" id="tile-column">
+                <img src="{{url_for('static', filename='img/mars_base.png')}}" class="mars-tile" id="mars_base">
+            </div>
+            {% elif i in env_dict.desert_storms %}
+            <div class="col-xs-2 col-sm-2 col-md-2 text-center" id="tile-column">
+                <img src="{{url_for('static', filename='img/mars_storm.png')}}" class="mars-tile" id="mars_storm">
+            </div>
+            {% else %}
+            <div class="col-xs-2 col-sm-2 col-md-2 text-center" id="tile-column">
+                <img src="{{url_for('static', filename='img/mars_tile.png')}}" class="mars-tile">
+            </div>
+            {% endif %} {% endfor %}
+        </div>
+        <div class="col-md-3 text-center"></div>
+    </div>
+</div>
+{% endblock %}

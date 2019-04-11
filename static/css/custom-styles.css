@@ -1,0 +1,389 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES    
+------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../../static/img/backg.png');
+    background-size: cover;
+
+}
+
+
+#wrapper {
+    width: 100%;
+
+}
+
+
+#page-index {
+    width: 100%;
+    margin: 100px  0px 0px 0px;
+    padding: 2% 20% 2% 20%;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    color: white;
+    background-color: #822118;
+    border: none;
+    width: 200px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn {
+    line-height: 25px;
+}
+
+
+.btn:hover,
+.btn:focus {
+    background-color: #812017;
+    color: white;
+}
+
+
+#text {
+    color: black;
+}
+
+
+label {
+    margin-left: 30px;
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+}
+
+.no-padding-left {
+    padding-left: 0px !important;
+}
+
+h2 {
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+}
+
+
+.row-dashboard {
+    width: 100%;
+    margin: auto;
+}
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS    
+------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+#dashboard_card {
+    height: 10%;
+    width: 100%;
+    margin: auto;
+    background-color: #621e12;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px outset #C4554C;
+}
+
+#dashboard_card h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#dashboard_card h5 {
+    color: white;
+    font-size: 14px;
+}
+
+#dashboard_card>.row {
+    margin: 10px;
+}
+
+
+#tile-column {
+    padding: 0px;
+    width: 62px;
+}
+
+.mars-tile {
+    margin: 1px;
+    height: 60px;
+    width: 60px;
+}
+
+#map-card {
+    width: 520px;
+    height: 520px;
+    margin: auto;
+    padding: 10px;
+    background-color: #621e12;
+    border: 1px outset #C4554C;
+}
+
+#grid-card {
+    width: 470px;
+    height: 470px;
+    padding: 0px;
+    background-image: url('../../static/img/grid2.png');
+    background-size: cover;
+    border: 1px outset #C4554C;
+    margin: auto;
+}
+
+
+#form-card {
+    width: 90%
+    margin: auto;
+    vertical-align: middle;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 480px;
+    background-color: #f3f3f3;
+}
+
+
+#form-card h2,
+h5 {
+    font-weight: bold;
+}
+
+
+.command-card {
+    vertical-align: middle;
+    border-width: 3px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 120px;
+    background-color: #621e12;
+    border: 1px outset #C4554C;
+    width: 70%;
+    margin: auto;
+}
+
+.command-card h2 {
+    font-weight: bold;
+    color: white;
+}
+
+
+#button_command {
+    background-color: #c25b28;
+    width: 160px;
+    height: 40px;
+}
+
+#button_command>i {
+    font-size: 3.3rem;
+}
+
+/*------------------------------------------------------------------------------
+    EDIT & ADD FORMS + TABLE    
+------------------------------------------------------------------------------*/
+
+input[type=text],
+select,
+textarea {
+    width: 90%;
+    height: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    border-color: #f2f2f2;
+    box-sizing: border-box;
+    margin: 0px 50px 0px 15px;
+    resize: vertical;
+    background-color: #f2f2f2;
+    color: white;
+}
+
+input[type="number"]:focus:not([readonly]) {
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 0 black;
+}
+
+input[type="number"].valid,
+input[type="number"]:focus.valid {
+    border-bottom: 1px solid #8B0000;
+    box-shadow: 0 1px 0 0 #8B0000;
+}
+
+th,
+td,
+tr {
+    color: black;
+    height: 36px;
+    padding-left: 5px;
+    font-size: 12px
+}
+
+textarea.materialize-textarea {
+    color: black;
+}
+
+.select-wrapper input.select-dropdown {
+    color: black;
+}
+
+input[type="text"]:not(.browser-default) {
+    color: black;
+}
+
+input[type="text"],
+input[type="number"] {
+    text-align: center;
+}
+
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input.invalid[type="number"]:not(.browser-default),
+input.invalid[type="number"]:not(.browser-default):focus,
+input.invalid[type="number"]:not(.browser-default) {
+    border-bottom: 1px solid #8B0000;
+    box-shadow: 0 1px 0 0 #8B0000;
+}
+
+
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label {
+    color: #8B0000;
+}
+
+
+input[type="number"]:not(.browser-default) {
+    height: 4rem;
+    cursor:pointer;
+}
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES     
+------------------------------------------------------------------------------*/
+
+/* MIN WIDTHS ----------------------------------------------------------------*/
+
+@media(min-width:1811px) {}
+
+
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+@media(max-width:1810px) {
+
+}
+
+@media(max-width:1600px) {
+
+
+    #page-index {
+     padding-left: 5%;
+    padding-right: 5%;
+
+    }
+
+    label {
+    margin-left: 10px;
+    }
+
+
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1200px) {
+
+    label {
+    margin-left: 5px;
+    }
+
+
+
+    #form-card {
+    margin-left: 0px;
+    }
+
+
+}
+
+@media(max-width:1056px) {
+
+}
+
+@media(max-width:993px) {
+
+    #page-index {
+     padding-left: 5%;
+    padding-right: 5%;
+
+    }
+    #dashboard_card {
+    width: 92%;
+    }
+
+
+
+    .no-padding-left {
+        padding-left: 15px !important;
+    }
+
+    #form-card {
+
+        height: 520px;
+    }
+
+    .command-card {
+        width: 75%;
+        margin-bottom: 20px;
+    }
+
+
+
+}
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:521px) {
+
+    #tile-column {
+    padding: 0px;
+    width: 34px;
+    }
+
+    .mars-tile {
+        margin: 1px;
+        height: 33px;
+        width: 33px;
+    }
+
+    #map-card {
+        width: 290px;
+        height: 300px;
+        padding: 7px;
+        background-color: #621e12;
+        border: 1px outset #C4554C;
+    }
+
+    #grid-card {
+        width: 300px;
+        height: 300px;
+    }
+
+
+
+}
