@@ -8,7 +8,7 @@ from flask_restful import Api
 from flask_bootstrap import Bootstrap
 from flask_s3 import FlaskS3
 
-from resources.user import UserRegister, UserLogin, UserLogout
+from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.algorithms import Environment, Pathfinder
 
 ## App Settings
@@ -24,6 +24,7 @@ app.config['DEBUG'] = True
 api = Api(app)
 
 Bootstrap(app)
+login_manager.init_app(app)
 s3 = FlaskS3(app)
 
 ## Register Resources
@@ -34,12 +35,6 @@ api.add_resource(UserRegister, '/register')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 
-
-## User Login
-@app.context_processor
-def context_processor():
-    current_user = session.get('current_user') or 'Guest'
-    return dict(current_user=current_user)
 
 
 

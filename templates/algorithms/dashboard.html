@@ -1,79 +1,40 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
 
-<div class="row text-center row-dashboard">
-    <div class="col-md-7 text-left no-padding-left">
 
-        <div class="card" id="form-card">
-            <form method="POST" enctype="multipart/form-data" class="col s12" action="{{ url_for('environment') }}"
-                  id="form-env">
-                <div class="row text-center">
-                    <h2>Create the Environment for AI</h2>
-                </div>
-                <div class="row text-center" style="height:35px; margin:0px">
-                    {% if warning %}
-                    <h5 style="color: red">{{ warning }} </h5>
-                    {% endif %}
-                </div>
-                <div class="row text-center">
-                    <h5> Specify tiles for Mars Rover start location, Space Station and Astronauts</h5>
-                    <br>
-                    <div class="input-field col s4">
-                        <input id="start_location" name="start_location" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="start_location">Start Location</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <input id="base_location" name="base_location" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="base_location">Base Location</label>
-                    </div>
-                    <div class="input-field col s4">
-                        <input id="astronauts" name="astronauts" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="astronauts">Astronauts</label>
-                    </div>
-                </div>
-                <br>
-                <div class="row text-center">
-                    <h5> Specify tiles for perilious desert storms </h5>
-                    <h5 style="font-style:italic">(at least one tile distance from the other objects)</h5>
-                    <br>
-                    <div class="input-field col s3">
-                        <input id="desert_storm_1" name="desert_storm_1" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="storm">#1</label>
-                    </div>
+{% block content %}
 
-                    <div class="input-field col s3">
-                        <input id="desert_storm_2" name="desert_storm_2" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="storm">#2</label>
-                    </div>
 
-                    <div class="input-field col s3">
-                        <input id="desert_storm_3" name="desert_storm_3" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="storm">#3</label>
-                    </div>
+<div class="dashboard-cards">
+    <div class="row row-title">
+        <h3>Mission on Mars</h3>
+    </div>
+    <div class="row row-cards">
 
-                    <div class="input-field col s3">
-                        <input id="desert_storm_4" name="desert_storm_4" type="number" class="validate" min="0" max="63"
-                               required>
-                        <label for="storm">#4</label>
-                    </div>
-                </div>
-                <div class="row text-center">
-                    <button class="btn waves-effect waves-light" type="submit" name="action" id="submit-button">Build
-                        the Environment
-                    </button>
-                </div>
-            </form>
+        <div class="card card-transparent">
+            <p> Mars Rover has finished assigned task and now is just returning to the Base. On the way
+                back it has to also collect the <b>astronauts</b> and avoid Mars <b>desert storms</b>.
+                Pathfinder is being navigated by simple & efficient <b>Q-Learning Artificial Intelligence</b>
+                algorithm. Planet Mars is being represented by 8x8 grid.
+            </p>
         </div>
+
+    </div>
+    <div class="row row-cards">
+        <div class="col-md-6 plain-element">
+            <div id="surveyElement"></div>
+            <div id="surveyResult"></div>
+        </div>
+        <div class="col-md-6 plain-element">
+            <img class="img-grid" src="/static/img/grid2.png" alt="Planet Grid"/>
+            </div>
     </div>
 
-    <div class="col-md-5 text-left">
-        <div class="card" id="grid-card"></div>
-    </div>
+    <div class="row row-cards"></div>
 </div>
 
+
 {% endblock %}
+
+
+<div class="card" id="grid-card"></div>
+

@@ -8,22 +8,32 @@
     <title>Pathfinder AI</title>
     <!-- Material Icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Materialize-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- FontAwesome Styles-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- Custom Styles-->
     <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet"/>
+
     <!-- Google Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
     <!-- jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- surveyJs-->
+    <script src="https://surveyjs.azureedge.net/1.0.78/survey.jquery.js"></script>
+    <link href="https://surveyjs.azureedge.net/1.0.78/survey.css" type="text/css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js"></script>
+
+
+    {% block extrahead %}{% endblock %}
 </head>
 
 
@@ -32,18 +42,19 @@
 <div id="wrapper">
 
 
-
     <!-- TOP NAVBAR -->
     <nav class="navbar navbar-default top-navbar" role="navigation">
         <div class="navbar-header">
             <a class="navbar-brand company-logo" href="{{ url_for('dashboard') }}"><img class="company-logo"
-                                                                                                src="/static/img/creolabs-white.png"
-                                                                                                alt="Creo Labs Logo"/></a>
+                                                                                        src="/static/img/creolabs-white.png"
+                                                                                        alt="Creo Labs Logo"/></a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
-            <li><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/lukaszmalucha/"><i class="fab fa-linkedin"></i> <b>
+            <li><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/lukaszmalucha/"><i
+                    class="fab fa-linkedin"></i> <b>
                 Linkedin</b></a></li>
-            <li><a class="nav-link" target="_blank" href="https://github.com/LukaszMalucha/Blockchain-Simulation/"><i class="fab fa-github"></i> <b>GitHub</b></a>
+            <li><a class="nav-link" target="_blank" href="https://github.com/LukaszMalucha/Blockchain-Simulation/"><i
+                    class="fab fa-github"></i> <b>GitHub</b></a>
             </li>
             <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
                     class="fas fa-caret-down"></i><b>{{ current_user.email }} </b></a></li>
@@ -67,9 +78,10 @@
 
     <!-- MOBILE -->
     <ul class="sidenav" id="mobile-demo">
-        <li><a  target="_blank" href="https://www.linkedin.com/in/lukaszmalucha/"><i class="fab fa-linkedin"></i>
+        <li><a target="_blank" href="https://www.linkedin.com/in/lukaszmalucha/"><i class="fab fa-linkedin"></i>
             Linkedin</a></li>
-        <li><a target="_blank" href="https://github.com/LukaszMalucha/Blockchain-Simulation/"><i class="fab fa-github"></i>GitHub</a>
+        <li><a target="_blank" href="https://github.com/LukaszMalucha/Blockchain-Simulation/"><i
+                class="fab fa-github"></i>GitHub</a>
         </li>
         {% if current_user.email != "Guest" %}
         <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
@@ -83,34 +95,24 @@
     </ul>
 
     <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
-
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
     <div id="page-index">
-        <div class="dashboard-cards">
-            <div class="row text-center row-dashboard">
-                <div class="card" id="dashboard_card">
-                    <div class="row text-center">
-                        <h2>Mars Mission</h2>
-                    </div>
-                    <div class="row text-center">
-                        <h5>Mars Rover has finished assigned task and now is just returning to the Base. On the way
-                            back it has to also collect the astronauts and avoid Mars desert storms.</h5>
-                        <h5> Space Buggy is being navigated by simple & efficient Q-Learning Artificial Intelligence
-                            algorithm. Planet Mars is being represented by 8x8 grid.
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <br>
-            </div>
 
-            {% block content %} {% endblock %}
-        </div>
+
+
+        {% block content %} {% endblock %}
+
     </div>
 
 
+
 </div>
-</div>
+<div class="footer">
+        <p> Powered by Creo Labs &trade;</p>
+    </div>
+
 <!-- Bootstrap Js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
@@ -119,19 +121,9 @@
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<script>
-            $('.dropdown-trigger').dropdown();
-
-
-
-</script>
-
-<script>
-        $(document).ready(function() {
-            $('.sidenav').sidenav();
-        });
-
-</script>
+<!-- Custom Js -->
+<script src="{{url_for('static', filename='js/custom-scripts.js')}}"></script>
+<script src="{{url_for('static', filename='js/forms.js')}}"></script>
 
 
 </body>
