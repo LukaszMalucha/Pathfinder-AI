@@ -1,6 +1,6 @@
 from flask import session, Response, render_template, request
 from flask_restful import Resource
-
+import json
 from models.ai import grid, best_route
 
 
@@ -33,12 +33,16 @@ class Environment(Resource):
             if abs(i - astronauts) < 2 or abs(i - start_location) < 2 or abs(i - start_location) < 2:
                 return {'error': 'Desert Storms should be placed at least one tile from the other objects'}
 
+        session['env_dict'] = env_dict
+        session['desert_storms'] = desert_storms
+
         return env_dict
 
 
 class Pathfinder(Resource):
 
     def post(self):
+
         env_dict = session.get('env_dict')
         desert_storms = session.get('desert_storms')
 
@@ -49,9 +53,14 @@ class Pathfinder(Resource):
         collection = env_dict['astronauts']
         desert_storm_1, desert_storm_2, desert_storm_3, desert_storm_4 = desert_storms
 
+        # Returns List
         path = best_route(starting_location, collection,
                           desert_storm_1, desert_storm_2,
                           desert_storm_3, desert_storm_4,
                           ending_location, reward_grid)
 
-        return Response(render_template('algorithms/route.html', env_dict=env_dict, path=path, mimetype='text/html'))
+        # my_path_json = json.dumps(path)
+        str_path = [ str(element) for element in path ]
+        env_dict['path'] = str_path
+        return env_dict
+        # return Response(render_template('algorithms/route.html', env_dict=env_dict, path=path, mimetype='text/html'))

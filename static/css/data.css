@@ -79,12 +79,23 @@
     font-size: 18px;
 }
 
+.btn-algorithm i {
+   font-size: 18px;
+}
+
 
 .btn-algorithm:hover,
 .btn-algorithm:focus {
     background-color: #15181c;
     color: white;
 }
+
+.btn:disabled {
+    background-color: #262a33 !important;
+    color: #262a33 !important;
+
+}
+
 
 /*------------------------------------------------------------------------------
     DASHBOARD CARDS
@@ -107,9 +118,9 @@
 .card-data {
     background: #3e4452;
     border-radius: 10px;
-    width: 75%;
+    width: 90%;
     margin: auto;
-    border: 1px solid #515663;
+
     min-height: 220px;
     padding-top: 5%;
 }
@@ -142,7 +153,7 @@
 }
 
 #row-grid {
-    padding: 3px;
+    padding: 4px 4px 0px 4px;
     margin-bottom: 0px;
 }
 
