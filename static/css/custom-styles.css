@@ -22,8 +22,8 @@ body {
 
 #page-index {
     width: 100%;
-    margin: 100px  0px 0px 0px;
-    padding: 0% 20% 0% 20%;
+    margin: 60px  0px 0px 0px;
+    padding: 0% 16% 0% 16%;
 
 }
 
@@ -36,26 +36,7 @@ body {
     text-align: center;
 }
 
-.btn {
-    color: white;
-    background-color: #822118;
-    border: none;
-    width: 200px;
-    margin: 0;
-    font-weight: bold;
-    font-size: 12px;
-}
 
-.btn {
-    line-height: 25px;
-}
-
-
-.btn:hover,
-.btn:focus {
-    background-color: #812017;
-    color: white;
-}
 
 
 #text {
@@ -80,6 +61,13 @@ h2 {
     margin: 5px;
 }
 
+#messageAlert {
+    display: none;
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}
+
 /*------------------------------------------------------------------------------
     IMAGES
 ------------------------------------------------------------------------------*/
@@ -87,15 +75,21 @@ h2 {
 
 .img-grid {
      width: 95%;
+     margin: auto;
+     margin-top: 2%;
 }
 
 
 .input-field .prefix {
     border-radius: 5px;
-    width: 2.5rem;
-    top: 0rem;
+    width: 2rem;
+    top: -0.5rem;
 }
 
+.tile {
+   width: 95%;
+   margin: 1%;
+}
 
 /*------------------------------------------------------------------------------
     FOOTER

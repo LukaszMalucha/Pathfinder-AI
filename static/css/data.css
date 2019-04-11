@@ -8,6 +8,9 @@
     margin: auto;
 }
 
+.row-header {
+    height: 60px;
+}
 
 .row-title {
     width: 100%;
@@ -21,6 +24,7 @@
     font-size: 30px;
     font-weight: 700;
     color: white;
+    margin-left: 1%;
 }
 
 .row-title p {
@@ -31,9 +35,15 @@
 
 .row-cards {
     width: 100%;
-    padding: 0% 0% 2% 0%;
+    padding: 0%;
+    position: relative;
 }
 
+
+.col-125 {
+    width: 12.5%;
+    float: left;
+}
 
 /*------------------------------------------------------------------------------
     BUTTONS
@@ -57,6 +67,24 @@
     background-color: #15181c;
 }
 
+.btn-algorithm {
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: transparent;
+    text-align: center;
+    color: white;
+    background-color: #262a33;
+    font-size: 18px;
+}
+
+
+.btn-algorithm:hover,
+.btn-algorithm:focus {
+    background-color: #15181c;
+    color: white;
+}
 
 /*------------------------------------------------------------------------------
     DASHBOARD CARDS
@@ -74,15 +102,13 @@
     margin: auto;
     color: white;
     font-size: 1.2rem;
-
 }
 
-
-
 .card-data {
-    background: #373d49;
-    border-radius: 5px;
-    width: 80%;
+    background: #3e4452;
+    border-radius: 10px;
+    width: 75%;
+    margin: auto;
     border: 1px solid #515663;
     min-height: 220px;
     padding-top: 5%;
@@ -108,9 +134,27 @@
 }
 
 
+.card-grid {
+    width: 78%;
+    background: #262a33;
+    margin:auto;
+    border-radius: 10px;
+}
+
+#row-grid {
+    padding: 3px;
+    margin-bottom: 0px;
+}
+
 /*------------------------------------------------------------------------------
     EDIT & ADD FORMS + TABLE
 ------------------------------------------------------------------------------*/
+
+
+button, input {
+font-family: 'Jura', sans-serif;
+}
+
 
 input[type=text],
 select,
@@ -182,8 +226,9 @@ input[type="number"]:not(.browser-default):focus:not([readonly]) + label {
 
 
 input[type="number"]:not(.browser-default) {
-    height: 2rem;
+    height: 1.5rem;
     cursor:pointer;
     width: 80%;
+
 }
 

@@ -39,9 +39,9 @@ api.add_resource(UserLogout, '/logout')
 
 
 ## Main View
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def dashboard():
-    return render_template("algorithms/dashboard.html")
+    return render_template("dashboard.html")
 
 
 @app.errorhandler(404)

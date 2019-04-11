@@ -2,6 +2,10 @@
 
 
 {% block content %}
+<div class="row row-header">
+    <div id="messageAlert" class="alert alert-message" role="alert">
+    </div>
+</div>
 
 
 <div class="dashboard-cards">
@@ -12,74 +16,87 @@
         <div class="card card-transparent">
             <p> Mars Rover has finished assigned task and now is just returning to the Base. On the way
                 back it has to also collect the <b>astronauts</b> and avoid Mars <b>desert storms</b>.
-                Pathfinder is being navigated by simple & efficient <b>Q-Learning Artificial Intelligence</b>
+                <b>Pathfinder</b> is being navigated by simple & efficient <b>Q-Learning Artificial Intelligence</b>
                 algorithm. Planet Mars is being represented by 8x8 grid.
             </p>
         </div>
 
     </div>
     <div class="row row-cards">
-        <form id="formRateWine" method="POST">
+        <form id="formEnvironment" method="POST">
             <div class="col-md-5 plain-element">
                 <div class="card card-data">
-                    <span class="card-title">Create Planet Environment</span>
-                    <br><br>
                     <div class="row">
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_buggy.png"/>
 
                             <input placeholder="Pathfinder Location" id="start_location" name="start_location"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_base.png"/>
                             <input placeholder="Base Location" id="base_location" name="base_location"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_astronauts.png"/>
                             <input placeholder="Astronauts Location" id="astronauts" name="astronauts"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
                             <input placeholder="Mars Storm #1" id="desert_storm_1" name="desert_storm_1"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
                             <input placeholder="Mars Storm #2" id="desert_storm_2" name="desert_storm_2"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
                             <input placeholder="Mars Storm #3" id="desert_storm_3" name="desert_storm_3"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
                         <div class="input-field col s12">
                             <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
                             <input placeholder="Mars Storm #4" id="desert_storm_4" name="desert_storm_4"
                                    type="number"
-                                   min="0" max="63" class="validate">
+                                   min="0" max="63" class="validate" required>
                         </div>
 
+
                     </div>
-                    <button type="submit" class="btn-card" id="modalClose"><span>Submit <i
+                    <button type="submit" class="btn-card" id="modalClose"><span>Create Environment <i
                             class="far fa-arrow-alt-circle-right"></i></span>
                     </button>
                 </div>
 
             </div>
         </form>
-        <div class="col-md-1 plain-element"></div>
+        <div class="col-md-1 plain-element">
+
+
+        </div>
         <div class="col-md-6 plain-element">
-            <img class="img-grid" src="/static/img/grid2.png" alt="Planet Grid"/>
+
+            <div class="card card-grid">
+                <div class="row plain-element" id="row-grid">
+                    {% for i in range(64) %}
+                    <div class="col-125 plain-element">
+                        <img src="{{url_for('static', filename='img/mars_tile.png')}}" class="tile">
+                    </div>
+                    {% endfor %}
+                </div>
+                    <button type="submit" class="btn btn-algorithm" id="buttonCompute"><span><i class="fas fa-microchip"></i> &nbsp;Compute Path</span>
+                    </button>
+            </div>
         </div>
     </div>
 
@@ -90,5 +107,9 @@
 {% endblock %}
 
 
-
-
+<img class="img-grid" src="/static/img/grid2.png" alt="Planet Grid"/>
+{% for i in range(64) %}
+<div class="col-125 plain-element">
+    <img src="{{url_for('static', filename='img/mars_tile.png')}}" class="tile">
+</div>
+{% endfor %}
