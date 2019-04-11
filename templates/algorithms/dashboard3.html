@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="dashboard-cards">
+    <div class="row row-title">
+        <h3>Mission on Mars</h3>
+    </div>
+    <div class="row row-cards">
+
+        <div class="card card-transparent">
+            <p> Mars Rover has finished assigned task and now is just returning to the Base. On the way
+                back it has to also collect the <b>astronauts</b> and avoid Mars <b>desert storms</b>.
+                Pathfinder is being navigated by simple & efficient <b>Q-Learning Artificial Intelligence</b>
+                algorithm. Planet Mars is being represented by <b>8x8 grid</b>.
+            </p>
+        </div>
+
+    </div>
+    <div class="row row-cards">
+        <div class="col-md-6 plain-element">
+            <div id="surveyElement"></div>
+            <div id="surveyResult"></div>
+        </div>
+        <div class="col-md-6 plain-element">
+            <img class="img-grid" src="/static/img/grid2.png" alt="Planet Grid"/>
+            </div>
+    </div>
+
+    <div class="row row-cards"></div>
+</div>
+
+
+{% endblock %}
+
+
+<div class="card" id="grid-card"></div>
+

@@ -4,7 +4,7 @@
 ------------------------------------------------------------------------------*/
 
 .dashboard-cards {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -31,8 +31,30 @@
 
 .row-cards {
     width: 100%;
-    text-align: center;
-    padding: 2% 0% 2% 0%;
+    padding: 0% 0% 2% 0%;
+}
+
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+.btn-card {
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: transparent;
+    text-align: right;
+    color: white;
+    background-color: #262a33;
+    font-size: 18px;
+
+}
+
+.btn-card:hover, .btn-card:active, .btn-card:focus {
+    background-color: #15181c;
 }
 
 
@@ -63,6 +85,7 @@
     width: 80%;
     border: 1px solid #515663;
     min-height: 220px;
+    padding-top: 5%;
 }
 
 .card-data .card-content {
@@ -81,223 +104,9 @@
     font-size: 1.5rem;
     font-weight: 300;
     text-align: left;
+    margin: 10%;
 }
 
-.card-data {
-    padding: 10px;
-}
-
-/*------------------------------------------------------------------------------
-    ENVIRONMENT FORM
-------------------------------------------------------------------------------*/
-
-#surveyElement {
-    width: 90%;
-    margin: auto;
-    border: 1px solid #515663;
-    border-radius: 5px;
-}
-
-
-#surveyElement h3 {
-    color: white;
-    font-weight: 500;
-
-}
-.sv_main {
-    font-family: 'Jura', sans-serif !important;
-
-}
-
-
-.sv_header {
-    background: #2c313a;
-    padding: 2em !important;
-
-}
-
-.sv_main.sv_default_css .sv_body {
-    background-color: #2c313a !important;
-    border-color: transparent !important;
-
-}
-
-.sv_main .sv_container .sv_body {
-    padding: 2em 2em 4em 2em !important;
-
-}
-
-.sv_main .sv_container .sv_body .sv_p_root .sv_q {
-    padding: 0em 0em 3em 0em !important;
-
-}
-
-
-.sv_row {
-    background-color: transparent !important;
-    border-color: transparent !important;
-}
-
-
-.sv_q_title {
-    color: white;
-    font-size: 1.1em !important;
-
-}
-
-#surveyElement label {
-    color: white;
-    font-size: 1.1em !important;
-}
-
-
-[type="radio"] + span::before, [type="radio"] + span::after {
-    margin: 12px;
-}
-
-[type="radio"]:not(:checked) + span::before, [type="radio"]:not(:checked) + span::after {
-    border: 2px solid grey;
-}
-
-[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
-    background-color: #bdbdbd;
-    border: 2px solid #bdbdbd;
-}
-
-.sv_main.sv_default_css input[type="button"] {
-    color: white;
-    background-color: #195d19 !important;
-    line-height: 2em;
-    font-size: 1.1em;
-}
-.sv_main.sv_default_css .sv_progress {
-    background-color:  #5a5a5a !important;
-}
-
-.sv_main.sv_default_css .sv_progress_bar {
-    background-color: #bdbdbd !important;
-}
-
-
-input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]) {
-    background-color: transparent !important;
-    border: none !important;
-    border-bottom: 1px solid gray !important;
-    box-shadow: 0 1px 0 0 gray !important;
-}
-
-input {
-font-family: 'Jura', sans-serif !important;
-}
-
-
-
-
-
-
-
-#dashboard_card {
-    height: 10%;
-    width: 100%;
-    margin: auto;
-    background-color: #621e12;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px outset #C4554C;
-}
-
-#dashboard_card h2 {
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-}
-
-#dashboard_card h5 {
-    color: white;
-    font-size: 14px;
-}
-
-#dashboard_card>.row {
-    margin: 10px;
-}
-
-
-#tile-column {
-    padding: 0px;
-    width: 62px;
-}
-
-.mars-tile {
-    margin: 1px;
-    height: 60px;
-    width: 60px;
-}
-
-#map-card {
-    width: 520px;
-    height: 520px;
-    margin: auto;
-    padding: 10px;
-    background-color: #621e12;
-    border: 1px outset #C4554C;
-}
-
-#grid-card {
-    width: 470px;
-    height: 470px;
-    padding: 0px;
-    background-image: url('../../static/img/grid2.png');
-    background-size: cover;
-    border: 1px outset #C4554C;
-    margin: auto;
-}
-
-
-#form-card {
-    width: 90%
-    margin: auto;
-    vertical-align: middle;
-    border-width: 3px;
-    border-radius: 10px;
-    padding: 10px;
-    height: 480px;
-    background-color: #f3f3f3;
-}
-
-
-#form-card h2,
-h5 {
-    font-weight: bold;
-}
-
-
-.command-card {
-    vertical-align: middle;
-    border-width: 3px;
-    border-radius: 10px;
-    padding: 10px;
-    height: 120px;
-    background-color: #621e12;
-    border: 1px outset #C4554C;
-    width: 70%;
-    margin: auto;
-}
-
-.command-card h2 {
-    font-weight: bold;
-    color: white;
-}
-
-
-#button_command {
-    background-color: #c25b28;
-    width: 160px;
-    height: 40px;
-}
-
-#button_command>i {
-    font-size: 3.3rem;
-}
 
 /*------------------------------------------------------------------------------
     EDIT & ADD FORMS + TABLE
@@ -361,8 +170,11 @@ input.invalid[type="number"]:not(.browser-default):focus,
 input.invalid[type="number"]:not(.browser-default) {
     border-bottom: 1px solid #8B0000;
     box-shadow: 0 1px 0 0 #8B0000;
-}
 
+}
+input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]) {
+    color: white !important;
+}
 
 input[type="number"]:not(.browser-default):focus:not([readonly]) + label {
     color: #8B0000;
@@ -370,7 +182,8 @@ input[type="number"]:not(.browser-default):focus:not([readonly]) + label {
 
 
 input[type="number"]:not(.browser-default) {
-    height: 4rem;
+    height: 2rem;
     cursor:pointer;
+    width: 80%;
 }
 

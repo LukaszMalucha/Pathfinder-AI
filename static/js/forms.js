@@ -14,7 +14,7 @@ var json = {
                 {
                     type: "text",
                     name: "start_location",
-                    title: "Pathfinder Current Location (0-63)",
+                    title: "Pathfinder Location",
                     titleLocation: "left",
                     isRequired: true,
                     validators: [
@@ -24,17 +24,93 @@ var json = {
                             maxValue: 63
                         }
                     ]
-                }
+                },
+                {
+                    type: "text",
+                    name: "base_location",
+                    title: "Mars Base Location",
+                    titleLocation: "left",
+                    isRequired: true,
+                    validators: [
+                         {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 63
+                        }
+                    ]
+                },
+                {
+                    type: "text",
+                    name: "astronauts",
+                    title: "Astronauts Outpost",
+                    titleLocation: "left",
+                    isRequired: true,
+                    validators: [
+                         {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 63
+                        }
+                    ]
+                },
+
             ]
         },
+        {
+        questions: [
+        {
+                    type: "text",
+                    name: "desert_storm_1",
+                    title: "Magnetic Storm #1",
+                    titleLocation: "left",
+                    isRequired: true,
+                    validators: [
+                         {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 63
+                        }
+                    ]
+                },
+                {
+                    type: "text",
+                    name: "desert_storm_2",
+                    title: "Magnetic Storm #2",
+                    titleLocation: "left",
+                    isRequired: true,
+                    validators: [
+                         {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 63
+                        }
+                    ]
+                },
+                {
+                    type: "text",
+                    name: "desert_storm_3",
+                    title: "Magnetic Storm #3",
+                    titleLocation: "left",
+                    isRequired: true,
+                    validators: [
+                         {
+                            type: "numeric",
+                            minValue: 0,
+                            maxValue: 63
+                        }
+                    ]
+                },
 
+
+        ]
+        }
 
     ]
 };
 
 window.survey = new Survey.Model(json);
 survey.requiredText = ":"; survey.render();
-Survey.surveyStrings.progressText = "Planet Environment {0} of {1}";
+Survey.surveyStrings.progressText = "Element {0} of {1}";
 survey
     .onComplete
 

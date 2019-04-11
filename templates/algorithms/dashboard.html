@@ -9,7 +9,6 @@
         <h3>Mission on Mars</h3>
     </div>
     <div class="row row-cards">
-
         <div class="card card-transparent">
             <p> Mars Rover has finished assigned task and now is just returning to the Base. On the way
                 back it has to also collect the <b>astronauts</b> and avoid Mars <b>desert storms</b>.
@@ -20,15 +19,64 @@
 
     </div>
     <div class="row row-cards">
-        <div class="col-md-6 plain-element">
-            <div id="surveyElement"></div>
-            <div id="surveyResult"></div>
-        </div>
+        <form id="formRateWine" method="POST">
+            <div class="col-md-6 plain-element">
+                <div class="card card-data">
+                    <span class="card-title">Create Planet Environment</span>
+                    <br>
+                    <div class="row plain-element">
+                        <div class="input-field col s12">
+                            <img class="img-responsive prefix" src="/static/img/mars_buggy.png"/>
+
+                            <input placeholder="Pathfinder Location" id="start_location" name="start_location"
+                                   type="number"
+                                   min="0" max="63" class="validate">
+                        </div>
+                        <div class="input-field col s12">
+                            <img class="img-responsive prefix" src="/static/img/mars_base.png"/>
+                            <input placeholder="Base Location" id="base_location" name="base_location"
+                                   type="number"
+                                   min="0" max="63" class="validate">
+                        </div>
+                        <div class="input-field col s12">
+                            <img class="img-responsive prefix" src="/static/img/mars_astronauts.png"/>
+                            <input placeholder="Astronauts Location" id="astronauts" name="astronauts"
+                                   type="number"
+                                   min="0" max="63" class="validate">
+                        </div>
+                        <div class="input-field col s12">
+                            <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
+                            <input placeholder="Mars Storm #1" id="desert_storm_1" name="desert_storm_1"
+                                   type="number"
+                                   min="0" max="63" class="validate">
+                        </div>
+                        <div class="input-field col s12">
+                            <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
+                            <input placeholder="Mars Storm #2" id="desert_storm_2" name="desert_storm_2"
+                                   type="number"
+                                   min="0" max="63" class="validate">
+                        </div>
+                        <div class="input-field col s12">
+                            <img class="img-responsive prefix" src="/static/img/mars_storm.png"/>
+                            <input placeholder="Mars Storm #3" id="desert_storm_3" name="desert_storm_3"
+                                   type="number"
+                                   min="0" max="63" class="validate">
+                        </div>
+
+
+                    </div>
+                    <button type="submit" class="btn-card" id="modalClose"><span>Submit <i
+                            class="far fa-arrow-alt-circle-right"></i></span>
+                    </button>
+                </div>
+
+            </div>
+        </form>
         <div class="col-md-6 plain-element">
             <img class="img-grid" src="/static/img/grid2.png" alt="Planet Grid"/>
-            </div>
+        </div>
     </div>
-
+    <br><br><br><br><br><br><br><br><br><br><br>
     <div class="row row-cards"></div>
 </div>
 
@@ -36,5 +84,5 @@
 {% endblock %}
 
 
-<div class="card" id="grid-card"></div>
+
 
