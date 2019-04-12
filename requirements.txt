@@ -6,6 +6,7 @@ Flask==1.0.2
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.4.1
 Flask-RESTful==0.3.7
+Flask-S3==0.3.3
 Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 gunicorn==19.9.0
