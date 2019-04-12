@@ -7,7 +7,6 @@ $(".alert-user").delay(3000).fadeOut(200, function() {
 
 $('.card-grid').hide();
 $('.img-grid').show();
-$('#buttonCompute').prop('disabled', true);
 
 $(document).ready(function() {
     $('.sidenav').sidenav();
@@ -38,11 +37,13 @@ $(document).ready(function() {
         .done(function(data) {
 
             if(data.error) {
-                $('#messageAlert').text(data.error).show().fadeOut(5000)
+                $('#messageAlert').text(data.error).show().fadeOut(5000);
+                $('#buttonCompute').hide();
+                $('.img-grid').show();
             }
 
             else {
-                $('#buttonCompute').prop('disabled', false);
+                $('#buttonCompute').show();
                 $('.card-grid').show();
                 $('.img-grid').hide();
                 for (var i = 0; i < 64; i++){

@@ -9,7 +9,8 @@
 }
 
 .row-header {
-    height: 60px;
+    height: 40px;
+    margin-bottom: 0px;
 }
 
 .row-title {
@@ -124,8 +125,8 @@
     border-radius: 10px;
     width: 75%;
     margin: auto;
-    min-height: 220px;
     padding-top: 6%;
+    margin-bottom: 20px;
 }
 
 .card-data .card-content {
@@ -214,3 +215,114 @@ input[type="number"]:not(.browser-default) {
     width: 80%;
 }
 
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+@media(max-width:1810px) {
+
+}
+
+@media(max-width:1600px) {
+
+    #page-index {
+     padding-left: 5%;
+    padding-right: 5%;
+
+    }
+
+
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1700px) {
+
+    .card-transparent {
+      font-size: 1rem;
+    }
+
+
+    .card-data {
+        padding-top: 2%;
+    }
+
+
+    .card-grid {
+       width: 400px;
+
+    }
+
+    .tile {
+       width: 50px;
+       height: 50px;
+
+    }
+
+    .tile-box {
+       width: 50px;
+       height: 50px;
+
+    }
+
+    .input-field {
+        margin-top: 0.6rem;
+    }
+
+}
+
+
+@media(max-width:993px) {
+    .card-data {
+        width: 96%;
+    }
+
+    .card-grid {
+       width: 336px;
+
+    }
+
+    .tile {
+       width: 42px;
+       height: 42px;
+
+    }
+
+    .tile-box {
+       width: 42px;
+       height: 42px;
+
+    }
+
+}
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:522px) {
+
+     .card-grid {
+       width: 288px;
+
+    }
+
+    .tile {
+       width: 36px;
+       height: 36px;
+
+    }
+
+    .tile-box {
+       width: 36px;
+       height: 36px;
+    }
+
+
+
+
+}

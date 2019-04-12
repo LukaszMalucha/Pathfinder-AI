@@ -38,7 +38,6 @@ body {
 
 
 
-
 #text {
     color: black;
 }
@@ -61,6 +60,7 @@ h2 {
     margin: 5px;
 }
 
+
 #messageAlert {
     display: none;
     color: red;
@@ -77,6 +77,7 @@ h2 {
      width: 76%;
      margin-left: 12%;
      margin-top: 2%;
+     margin-bottom: 2%;
 }
 
 
@@ -220,10 +221,6 @@ h2 {
     MEDIA QUERIES     
 ------------------------------------------------------------------------------*/
 
-/* MIN WIDTHS ----------------------------------------------------------------*/
-
-@media(min-width:1811px) {}
-
 
 
 /* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
@@ -234,101 +231,45 @@ h2 {
 
 @media(max-width:1600px) {
 
-
-    #page-index {
-     padding-left: 5%;
-    padding-right: 5%;
-
-    }
-
-    label {
-    margin-left: 10px;
-    }
-
-
-
 }
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
-@media(max-width:1200px) {
+@media(max-width:1700px) {
+     html {
+     height: 1000px;
 
-    label {
-    margin-left: 5px;
     }
-
-
-
-    #form-card {
-    margin-left: 0px;
-    }
-
 
 }
 
-@media(max-width:1056px) {
-
-}
 
 @media(max-width:993px) {
-
-    #page-index {
-     padding-left: 5%;
-    padding-right: 5%;
+   html {
+     height: 1300px;
 
     }
-    #dashboard_card {
-    width: 92%;
+   #page-index {
+     height: 800px;
+
     }
-
-
-
-    .no-padding-left {
-        padding-left: 15px !important;
-    }
-
-    #form-card {
-
-        height: 520px;
-    }
-
-    .command-card {
-        width: 75%;
-        margin-bottom: 20px;
-    }
-
-
 
 }
 
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
-@media(max-width:521px) {
+@media(max-width:522px) {
 
-    #tile-column {
-    padding: 0px;
-    width: 34px;
+       html {
+     height: 1300px;
+
+    }
+   #page-index {
+     height: 1200px;
+
     }
 
-    .mars-tile {
-        margin: 1px;
-        height: 33px;
-        width: 33px;
-    }
-
-    #map-card {
-        width: 290px;
-        height: 300px;
-        padding: 7px;
-        background-color: #621e12;
-        border: 1px outset #C4554C;
-    }
-
-    #grid-card {
-        width: 300px;
-        height: 300px;
-    }
 
 
 
