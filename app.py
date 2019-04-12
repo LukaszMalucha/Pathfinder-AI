@@ -1,6 +1,6 @@
 ## App Utilities
 import os
-import env
+# import env
 from db import db
 
 from flask import Flask, render_template, session
@@ -20,7 +20,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.config['FLASKS3_BUCKET_NAME'] = os.environ.get('FLASKS3_BUCKET_NAME')
 
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 api = Api(app)
 
 Bootstrap(app)
@@ -74,5 +74,5 @@ if __name__ == '__main__':
 #     app.run(host='0.0.0.0')
 
 # Heroku
-#     port = int(os.environ.get('PORT', 5000))
-#     app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
