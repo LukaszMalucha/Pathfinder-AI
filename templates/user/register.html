@@ -26,6 +26,7 @@
 <div class="container">
 
     <form class="form-signin" method="POST" id="form-signin" action="{{ url_for('userregister') }}">
+        <div class="card card-signin">
         <i class="material-icons" id="icon-login">assignment_turned_in</i>
         <fieldset class="form-box">
             {{ form.hidden_tag() }}
@@ -69,6 +70,7 @@
                     class="far fa-arrow-alt-circle-right"></i></span>
             </button>
         </fieldset>
+        </div>
     </form>
 </div>
 

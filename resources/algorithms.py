@@ -1,6 +1,5 @@
 from flask import session, Response, render_template, request
 from flask_restful import Resource
-import json
 from models.ai import grid, best_route
 
 
@@ -59,8 +58,7 @@ class Pathfinder(Resource):
                           desert_storm_3, desert_storm_4,
                           ending_location, reward_grid)
 
-        # my_path_json = json.dumps(path)
         str_path = [ str(element) for element in path ]
         env_dict['path'] = str_path
         return env_dict
-        # return Response(render_template('algorithms/route.html', env_dict=env_dict, path=path, mimetype='text/html'))
+

@@ -45,6 +45,10 @@
     float: left;
 }
 
+.col-ai {
+    position: relative;
+}
+
 /*------------------------------------------------------------------------------
     BUTTONS
 ------------------------------------------------------------------------------*/
@@ -118,11 +122,10 @@
 .card-data {
     background: #3e4452;
     border-radius: 10px;
-    width: 90%;
+    width: 75%;
     margin: auto;
-
     min-height: 220px;
-    padding-top: 5%;
+    padding-top: 6%;
 }
 
 .card-data .card-content {
@@ -148,12 +151,16 @@
 .card-grid {
     width: 78%;
     background: #262a33;
+    background-image: url('../../static/img/mars_surface.jpg');
+    background-size: cover;
     margin:auto;
     border-radius: 10px;
+    padding: 0px;
+
 }
 
 #row-grid {
-    padding: 4px 4px 0px 4px;
+    padding: 0px;
     margin-bottom: 0px;
 }
 
@@ -182,37 +189,6 @@ textarea {
     color: white;
 }
 
-input[type="number"]:focus:not([readonly]) {
-    border-bottom: 1px solid black;
-    box-shadow: 0 1px 0 0 black;
-}
-
-input[type="number"].valid,
-input[type="number"]:focus.valid {
-    border-bottom: 1px solid #8B0000;
-    box-shadow: 0 1px 0 0 #8B0000;
-}
-
-th,
-td,
-tr {
-    color: black;
-    height: 36px;
-    padding-left: 5px;
-    font-size: 12px
-}
-
-textarea.materialize-textarea {
-    color: black;
-}
-
-.select-wrapper input.select-dropdown {
-    color: black;
-}
-
-input[type="text"]:not(.browser-default) {
-    color: black;
-}
 
 input[type="text"],
 input[type="number"] {
@@ -223,16 +199,12 @@ input[type="number"]:not(.browser-default):focus:not([readonly]),
 input.invalid[type="number"]:not(.browser-default),
 input.invalid[type="number"]:not(.browser-default):focus,
 input.invalid[type="number"]:not(.browser-default) {
-    border-bottom: 1px solid #8B0000;
-    box-shadow: 0 1px 0 0 #8B0000;
+    border-bottom: 1px solid #c0c0c0;
+    box-shadow: 0 1px 0 0 #c0c0c0;
 
 }
 input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]) {
     color: white !important;
-}
-
-input[type="number"]:not(.browser-default):focus:not([readonly]) + label {
-    color: #8B0000;
 }
 
 
@@ -240,6 +212,5 @@ input[type="number"]:not(.browser-default) {
     height: 1.5rem;
     cursor:pointer;
     width: 80%;
-
 }
 

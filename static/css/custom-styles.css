@@ -87,8 +87,17 @@ h2 {
 }
 
 .tile {
-   width: 95%;
-   margin: 1%;
+   width: 60px;
+   height: 60px;
+   border-radius: 10px;
+}
+
+.tile-box {
+   width: 60px;
+   height: 60px;
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
 }
 
 /*------------------------------------------------------------------------------
@@ -109,6 +118,29 @@ h2 {
     color: #fff;
     padding: 15px 0px;
     text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------
+    ANIMATIONS
+------------------------------------------------------------------------------*/
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #8c8c8c;
+  border-radius: 50%;
+  margin-top: 25%;
+  margin-left: 40%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.5s linear infinite;
+  display: none;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 

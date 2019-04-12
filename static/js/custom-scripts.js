@@ -5,14 +5,13 @@ $(".alert-user").delay(3000).fadeOut(200, function() {
     $(this).alert('close');
 });
 
-
+$('.card-grid').hide();
+$('.img-grid').show();
+$('#buttonCompute').prop('disabled', true);
 
 $(document).ready(function() {
     $('.sidenav').sidenav();
-    $('.card-grid').hide();
-    $('.img-grid').show();
 
-    $('#buttonCompute').prop('disabled', true);
 
 //    Create environment
 
@@ -56,7 +55,7 @@ $(document).ready(function() {
                     else if (i == data.desert_storm_1 || i == data.desert_storm_2 || i == data.desert_storm_3 || i == data.desert_storm_4)
                        $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_storm.png" class="tile"></div>')
                     else
-                        $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_tile.png" class="tile"></div>')
+                        $('#row-grid').append('<div class="col-125 plain-element"><div class="tile-box"></div></div>')
                 }
              }
         });
@@ -70,12 +69,13 @@ $(document).ready(function() {
     $("#formPathfinder").on('submit', function(event) {
         $('#row-grid').empty()
         $('.card-grid').hide()
+        $('.loader').show();
         $.ajax({
             type : 'POST',
             url: '/pathfinder',
         })
         .done(function(data) {
-            console.log(data)
+            $('.loader').hide();
             if(data.error) {
                 $('#messageAlert').text(data.error).show().fadeOut(5000)
             }
@@ -87,7 +87,7 @@ $(document).ready(function() {
                 var path = data.path
                 for (var i = 0; i < 64; i++){
                     if (i == data.astronauts)
-                      $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_astronauts.png" class="tile"></div>')
+                      $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_collection.png" class="tile"></div>')
                     else if (i == data.start_location)
                        $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_buggy.png" class="tile"></div>')
                     else if (i == data.base_location)
@@ -97,7 +97,7 @@ $(document).ready(function() {
                     else if (data.path.includes(i.toString()))
                         $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_path.png" class="tile"></div>')
                     else
-                        $('#row-grid').append('<div class="col-125 plain-element"><img src="/static/img/mars_tile.png" class="tile"></div>')
+                        $('#row-grid').append('<div class="col-125 plain-element"><div class="tile-box"></div></div>')
                 }
              }
         });
