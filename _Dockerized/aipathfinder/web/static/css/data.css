@@ -1,0 +1,328 @@
+
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.dashboard-cards {
+    width: 100%;
+    margin: auto;
+}
+
+.row-header {
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+.row-title {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+
+}
+
+
+.row-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-left: 1%;
+}
+
+.row-title p {
+    color: #dadddf;
+    font-size: 12px;
+
+}
+
+.row-cards {
+    width: 100%;
+    padding: 0%;
+    position: relative;
+}
+
+
+.col-125 {
+    width: 12.5%;
+    float: left;
+}
+
+.col-ai {
+    position: relative;
+}
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+.btn-card {
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: transparent;
+    text-align: right;
+    color: white;
+    background-color: #262a33;
+    font-size: 18px;
+
+}
+
+.btn-card:hover, .btn-card:active, .btn-card:focus {
+    background-color: #15181c;
+}
+
+.btn-algorithm {
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: transparent;
+    text-align: center;
+    color: white;
+    background-color: #262a33;
+    font-size: 18px;
+}
+
+.btn-algorithm i {
+   font-size: 18px;
+}
+
+
+.btn-algorithm:hover,
+.btn-algorithm:focus {
+    background-color: #15181c;
+    color: white;
+}
+
+.btn:disabled {
+    background-color: #262a33 !important;
+    color: #262a33 !important;
+
+}
+
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS
+------------------------------------------------------------------------------*/
+
+
+
+
+.card-transparent {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    width: 98%;
+    margin: auto;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.card-data {
+    background: #3e4452;
+    border-radius: 10px;
+    width: 75%;
+    margin: auto;
+    padding-top: 6%;
+    margin-bottom: 20px;
+}
+
+.card-data .card-content {
+    font-size: 1rem;
+    text-align: left;
+    color: white;
+}
+
+.card-data .card-content b {
+    color: white;
+    font-weight: normal;
+}
+
+.card-data .card-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+    margin: 10%;
+}
+
+
+.card-grid {
+    width: 78%;
+    background: #262a33;
+    background-image: url('../../static/img/mars_surface.jpg');
+    background-size: cover;
+    margin:auto;
+    border-radius: 10px;
+    padding: 0px;
+
+}
+
+#row-grid {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+/*------------------------------------------------------------------------------
+    EDIT & ADD FORMS + TABLE
+------------------------------------------------------------------------------*/
+
+
+button, input {
+font-family: 'Jura', sans-serif;
+}
+
+
+input[type=text],
+select,
+textarea {
+    width: 90%;
+    height: 50px;
+    padding: 12px;
+    border-radius: 10px;
+    border-color: #f2f2f2;
+    box-sizing: border-box;
+    margin: 0px 50px 0px 15px;
+    resize: vertical;
+    background-color: #f2f2f2;
+    color: white;
+}
+
+
+input[type="text"],
+input[type="number"] {
+    text-align: center;
+}
+
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input.invalid[type="number"]:not(.browser-default),
+input.invalid[type="number"]:not(.browser-default):focus,
+input.invalid[type="number"]:not(.browser-default) {
+    border-bottom: 1px solid #c0c0c0;
+    box-shadow: 0 1px 0 0 #c0c0c0;
+
+}
+input:not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]) {
+    color: white !important;
+}
+
+
+input[type="number"]:not(.browser-default) {
+    height: 1.5rem;
+    cursor:pointer;
+    width: 80%;
+}
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+@media(max-width:1810px) {
+
+}
+
+@media(max-width:1600px) {
+
+    #page-index {
+     padding-left: 5%;
+    padding-right: 5%;
+
+    }
+
+
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1700px) {
+
+    .card-transparent {
+      font-size: 1rem;
+    }
+
+
+    .card-data {
+        padding-top: 2%;
+    }
+
+
+    .card-grid {
+       width: 400px;
+
+    }
+
+    .tile {
+       width: 50px;
+       height: 50px;
+
+    }
+
+    .tile-box {
+       width: 50px;
+       height: 50px;
+
+    }
+
+    .input-field {
+        margin-top: 0.6rem;
+    }
+
+}
+
+
+@media(max-width:993px) {
+    .card-data {
+        width: 96%;
+    }
+
+    .card-grid {
+       width: 336px;
+
+    }
+
+    .tile {
+       width: 42px;
+       height: 42px;
+
+    }
+
+    .tile-box {
+       width: 42px;
+       height: 42px;
+
+    }
+
+}
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:522px) {
+
+     .card-grid {
+       width: 288px;
+
+    }
+
+    .tile {
+       width: 36px;
+       height: 36px;
+
+    }
+
+    .tile-box {
+       width: 36px;
+       height: 36px;
+    }
+
+
+
+
+}
