@@ -1,4 +1,3 @@
-
 /*------------------------------------------------------------------------------
     ROWS
 ------------------------------------------------------------------------------*/
@@ -219,29 +218,17 @@ input[type="number"]:not(.browser-default) {
     MEDIA QUERIES
 ------------------------------------------------------------------------------*/
 
-
-
-/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
-
-@media(max-width:1810px) {
-
-}
-
-@media(max-width:1600px) {
-
-    #page-index {
-     padding-left: 5%;
-    padding-right: 5%;
-
-    }
-
-
-
 }
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:1700px) {
+
+    #page-index {
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
 
     .card-transparent {
       font-size: 1rem;
