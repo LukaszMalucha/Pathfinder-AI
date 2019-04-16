@@ -3,7 +3,7 @@ import os
 # import env
 from db import db
 
-from flask import Flask, render_template, session
+from flask import Flask, render_template
 from flask_restful import Api
 from flask_bootstrap import Bootstrap
 from flask_s3 import FlaskS3
