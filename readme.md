@@ -1,6 +1,6 @@
 # Pathfinder AI
 
-#### [Visit the App](https://ai-pathfinder1.herokuapp.com/)
+#### [Visit the App](https://ai-pathfinder.herokuapp.com/)
 
 <br>
 
