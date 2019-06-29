@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------*/
 
 .dashboard-cards {
-    width: 100%;
+    width: 70%;
     margin: auto;
 }
 
@@ -218,16 +218,15 @@ input[type="number"]:not(.browser-default) {
     MEDIA QUERIES
 ------------------------------------------------------------------------------*/
 
-}
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:1700px) {
 
-    #page-index {
-        padding-left: 5%;
-        padding-right: 5%;
 
+    .dashboard-cards {
+        width: 80% !important;
+        margin: auto;
     }
 
     .card-transparent {
