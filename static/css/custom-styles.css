@@ -6,6 +6,7 @@
     font-weight: 400 500;
     src: url('/static/fonts/TTF/Jura-Medium.otf');
 }
+
 @font-face {
     font-family: 'Jura';
     font-weight: 600;
@@ -131,14 +132,15 @@ h2 {
 }
 
 .footer a {
-    color: #fff;
+    color: #fff !important;
+    text-decoration: none !important;
 }
 
 .footer a:hover,
 .footer a:focus,
 .footer a:active {
     color: #4f84ae;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 
