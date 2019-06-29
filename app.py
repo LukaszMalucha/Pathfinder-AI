@@ -68,7 +68,7 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    # app.run()
+    app.run()
 
 # Docker
 #     app.run(host='0.0.0.0')
