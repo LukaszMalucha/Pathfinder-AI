@@ -145,11 +145,38 @@ nav ul a {
 }
 
 
-#trigger {
-   font-size: 24px;
-   padding: 10px 0px 10px 0px;
+nav a.sidenav-trigger {
+    line-height: 1;
+    display: block;
+    padding: 0px !important;
+    margin: 0px !important;
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
 
+
+nav a.sidenav-trigger i {
+    height: 40px;
+    line-height: 1;
+}
+
+.sidenav-trigger i {
+    font-weight: bold;
+
+}
+
+
+#trigger {
+   position: fixed
+   height:24px;
+   font-size: 24px;
+   padding: 0px;
+}
+
+.sidenav li > a > i {
+    margin: 0px !important;
+}
 
 
 
@@ -310,23 +337,6 @@ nav ul a {
 
     .navbar-header {
         width: 70%;
-    }
-
-    nav a.sidenav-trigger {
-        line-height: 1;
-        display: block;
-    }
-
-    nav a.sidenav-trigger i {
-        height: 60px;
-        line-height: 1;
-    }
-
-    #trigger {
-        position: relative;
-        top: -10px;
-        left: 24px;
-        margin: 10px 0px 10px 0px;
     }
 
 }
