@@ -1,6 +1,6 @@
 # Pathfinder AI
 
-#### [Visit the App](http://www.unflasked.com/pathfinder_ai/)
+#### [Visit the App](http://www.unflasked.com/pathfinder_ai)
 
 <br>
 
